@@ -8,27 +8,27 @@ var bio = {
         "github" : "scottnm",
         "location" : "Austin, TX"
     },
-    "picture_URL" : "images/test-photo.jpg",
-    "welcome_message" : "Welcome! I am an aspiring Software Engineer and Game Developer. All of the projects listed on this resume can be found on my Github!",
+    "picture_URL" : "images/resume-photo.jpg",
+    "welcome_message" : "Welcome! I am an aspiring Software Engineer and Game Developer as well as a full time Computer Science student at the University of Texas at Austin. All of the projects listed on this resume can be found on my Github!",
     "skills" : [
         "Object Oriented Programming",
         "Game Development",
         "C/C++",
         "Teaching"
     ]
-}
+};
 
-bio.displayContacts = function(){
+bio.displayContacts = function(position){
     var formattedContact = HTMLmobile.replace("%data%", bio.contact_info.mobile);
-    $("#topContacts").append(formattedContact);
+    $("#"+position).append(formattedContact);
     formattedContact = HTMLemail.replace("%data%", bio.contact_info.email);
-    $("#topContacts").append(formattedContact);
+    $("#"+position).append(formattedContact);
     formattedContact = HTMLgithub.replace("%data%", bio.contact_info.github);
-    $("#topContacts").append(formattedContact);
+    $("#"+position).append(formattedContact);
     formattedContact = HTMLlocation.replace("%data%", bio.contact_info.location);
-    $("#topContacts").append(formattedContact);
+    $("#"+position).append(formattedContact);
 
-}
+};
 
 bio.displaySkills = function(){
     /* append all of the skills */
@@ -37,7 +37,7 @@ bio.displaySkills = function(){
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
         $("#skills").append(formattedSkill);
     }
-}
+};
 
 var workExperience = {
     "SWE Intern":{
@@ -46,7 +46,7 @@ var workExperience = {
         "dates": "June 2015 - August 2015",
         "location": "Mountain View, CA",
         "description": "Worked on Google's mobile development team, and helped develop technology for the Web-based Google Play store.",
-        "display": "false"
+        "display": "true"
     },
 
     "Pod Mentor":{
@@ -56,21 +56,58 @@ var workExperience = {
             "location": "Austin, TX",
             "description": "Mentored and instructed a group of 20 Computer Science Freshman in the tools and resources available to them. Also provided tutoring for introductory Computer Science courses.",
             "display": "true"
+    }
+};
+
+workExperience.display = function(){
+    /* append all of the jobs */
+    for(job in workExperience){
+        curr_job = workExperience[job];
+        if(curr_job.display == "true"){
+            $("#workExperience").append(HTMLworkStart);
+            var formattedEmployer = HTMLworkEmployer.replace("%data%", curr_job.employer);
+            var formattedJobTitle = HTMLworkTitle.replace("%data%", curr_job.position);
+            var formattedJob = formattedEmployer + " " + formattedJobTitle;
+            $(".work-entry:last").append(formattedJob);
+            var formattedDate = HTMLworkDates.replace("%data%", curr_job.dates);
+            $(".work-entry:last").append(formattedDate);
+            var formattedLocation = HTMLworkLocation.replace("%data%", curr_job.location);
+            $(".work-entry:last").append(formattedLocation);
+            var formattedDescription = HTMLworkDescription.replace("%data%", curr_job.description);
+            $(".work-entry:last").append(formattedDescription);
         }
-}
+    }
+};
 
 var education = {
     "schools": [
         {
             "name": "University of Texas at Austin",
+            "degree": "Bachelor of Science",
+            "dates": "May 2017",
             "city": "Austin, Texas",
             "major": "Computer Science",
-            "minor": "",
-            "gradyear": "2017",
-            "onlineinfo": "www.utexas.edu"
         }
     ]
 }
+
+education.display = function(){
+    var schools_list = education.schools;
+    for(school_id in schools_list){
+        var school = schools_list[school_id];
+        $("#education").append(HTMLschoolStart);
+        var formattedName = HTMLschoolName.replace("%data%", school.name);
+        $(".education-entry:last").append(formattedName);
+        var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
+        $(".education-entry:last").append(formattedDegree);
+        var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
+        $(".education-entry:last").append(formattedDates);
+        var formattedLocation = HTMLschoolLocation.replace("%data%", school.city);
+        $(".education-entry:last").append(formattedLocation);
+        var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
+        $(".education-entry:last").append(formattedMajor);
+    }
+};
 
 var github_prefix = "https:\/\/github.com\/scottnm\/"
 var projects = {
@@ -160,31 +197,9 @@ projects.display = function(){
     }
 }
 
-function displayWork(){
-    /* append all of the jobs */
-    for(job in workExperience){
-        curr_job = workExperience[job];
-        if(curr_job.display == "true"){
-            $("#workExperience").append(HTMLworkStart);
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", curr_job.employer);
-            var formattedJobTitle = HTMLworkTitle.replace("%data%", curr_job.position);
-            var formattedJob = formattedEmployer + " " + formattedJobTitle;
-            $(".work-entry:last").append(formattedJob);
-            var formattedDate = HTMLworkDates.replace("%data%", curr_job.dates);
-            $(".work-entry:last").append(formattedDate);
-            var formattedLocation = HTMLworkLocation.replace("%data%", curr_job.location);
-            $(".work-entry:last").append(formattedLocation);
-            var formattedDescription = HTMLworkDescription.replace("%data%", curr_job.description);
-            $(".work-entry:last").append(formattedDescription);
-        }
-    }
-}
-
 var internationalizeButton = "<button id=\"internationalize_button\">Internationalize</button>";
 
 function inName(){
-    console.log(document.getElementById("internationalize_button").innerHTML);
-
     var newName;
     var oldName = bio.name;
     var space_pos = oldName.indexOf(" ");
@@ -215,14 +230,16 @@ var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 /* displaying header information */
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
-bio.displayContacts();
+bio.displayContacts("topContacts");
 $("#header").append(HTMLbioPic.replace("%data%", bio.picture_URL));
 $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcome_message)); 
 bio.displaySkills();
 
 /* meat of the resume */
-displayWork();
+workExperience.display();
 projects.display();
+education.display();
+bio.displayContacts("footerContacts");
 
 
 $(document).click(function(loc){
