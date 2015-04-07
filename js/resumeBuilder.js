@@ -9,7 +9,7 @@ var bio = {
         "location" : "Austin, TX"
     },
     "picture_URL" : "images/resume-photo.jpg",
-    "welcome_message" : "Welcome! I am an aspiring Software Engineer and Game Developer as well as a full time Computer Science student at the University of Texas at Austin. All of the projects listed on this resume can be found on my Github!",
+    "welcome_message" : "Welcome! I am an aspiring Software Engineer and Game Developer as well as a full time Computer Science student at the University of Texas at Austin. Most of the projects listed on this resume can be found on my Github!",
     "skills" : [
         "Object Oriented Programming",
         "Game Development",
@@ -116,15 +116,15 @@ var projects = {
             "title":"Huffman Compression",
             "dates":"Spring 2014",
             "description":"Implemented the Huffman compression algorithm to compress and decompress files",
-            "link":github_prefix+"Huffman-Compression.git",
-            "display":"false"
+            "link":"#",
+            "display":"true"
         },
         {
             "title":"Recursive Anagram Generator",
             "dates":"Spring 2014",
             "description":"Built a program that recursively finds all of the anagrams of a user-given string of text",
-            "link":github_prefix+"Anagram-Solver.git",
-            "display":"false"
+            "link":"#",
+            "display":"true"
         },
         {
             "title":"Binary Tree Builder",
