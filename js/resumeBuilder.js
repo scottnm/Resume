@@ -117,7 +117,7 @@ var projects = {
             "dates":"Spring 2014",
             "description":"Implemented the Huffman compression algorithm to compress and decompress files",
             "link":github_prefix+"Huffman-Compression.git",
-            "display":"true"
+            "display":"false"
         },
         {
             "title":"Recursive Anagram Generator",
