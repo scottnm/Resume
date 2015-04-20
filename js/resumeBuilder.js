@@ -107,6 +107,7 @@ education.display = function(){
         var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
         $(".education-entry:last").append(formattedMajor);
     }
+
 };
 
 var github_prefix = "https:\/\/github.com\/scottnm\/"
@@ -117,21 +118,24 @@ var projects = {
             "dates":"Spring 2014",
             "description":"Implemented the Huffman compression algorithm to compress and decompress files",
             "link":"#",
-            "display":"true"
+            "display":"true",
+            "extern":"false"
         },
         {
             "title":"Recursive Anagram Generator",
             "dates":"Spring 2014",
             "description":"Built a program that recursively finds all of the anagrams of a user-given string of text",
             "link":"#",
-            "display":"true"
+            "display":"true",
+            "extern":"false"
         },
         {
             "title":"Binary Tree Builder",
             "dates":"Fall 2014",
             "description":"Built a program that builds a binary tree from a post-order traversal and outputs the breadth-first traversal of that tree",
             "link":github_prefix+"BinaryTreeBuilder.git",
-            "display":"true"
+            "display":"true",
+            "extern":"true"
         }
     ],
     "Python": [
@@ -140,28 +144,32 @@ var projects = {
             "dates":"Spring 2014",
             "description":"Built classic game Pong, with a trained neural network opponent",
             "link":github_prefix+"Neuroevolution-Pong.git",
-            "display":"true"
+            "display":"true",
+            "extern":"true"
         },
         {
             "title":"Neural Net NAND",
             "dates":"Spring 2014",
             "description":"Developed a neural network structure that evolved to represent a 3-bit NAND function",
             "link":github_prefix+"Neural-Network-NAND.git",
-            "display":"false"
+            "display":"false",
+            "extern":"true"
         },
         {
             "title":"Evolving Boss Battles",
             "dates":"Spring 2014",
             "description":"Developed a neural network and game environment to train a simple boss-character to compete against a player character, and researched the effects of different training methods and neural network structures",
             "link":github_prefix+"Evolving-Boss-Battles.git",
-            "display":"true"
+            "display":"true",
+            "extern":"true"
         },
         {
             "title":"Top Down Shooter (Game)",
             "dates":"Winter 2014",
             "description":"Developing the framework/basic mechanics for a topdown zombie shooter game. Currently only in the prototyping phase, but mechanics such as walking, turning, shooting, reloading, collision, and enemy generation have already been implemented",
             "link":github_prefix+"itchnscratch.git",
-            "display":"true"
+            "display":"true",
+            "extern":"true"
         }
     ],
     "C++": [
@@ -170,7 +178,8 @@ var projects = {
             "dates": "Spring 2015",
             "description":"Using a c++ ncurses library, developed a simple text-based form of the game Space Invaders, called Space Raiders. Implemented simple mechanics such as collisions, win-lose conditions, and a simple enemy AI.",
             "link":github_prefix+"Space-Raiders.git",
-            "display":"true"
+            "display":"true",
+            "extern":"true"
         }
     ]
 }
@@ -180,12 +189,17 @@ projects.display = function(){
         var language = projects[LANG];
         for(PROJ in language){
             /* iterate through each project */
+            /* append the project to the website */
             var project = language[PROJ];
-            if(project.display == "true"){
-                /* append the project to the website */
+            if(project.display){
                 $("#projects").append(HTMLprojectStart);
                 var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
-                formattedTitle = formattedTitle.replace("href=\"#\"", "href=\""+project.link+"\"");
+                if(project.extern == "true"){
+                    formattedTitle = formattedTitle.replace("href=\"#\"", "href=\""+project.link+"\"");
+                }
+                else{
+                    formattedTitle = formattedTitle.replace("href=\"#\"", "href=\"javascript:void(0)\" onclick=\"unavailableAlert();\"");
+                }
                 var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
                 var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
                 $(".project-entry:last").append(formattedTitle);
@@ -195,6 +209,11 @@ projects.display = function(){
 
         }   
     }
+}
+
+
+var unavailableAlert = function(){
+    alert("This project is not available to view online, please contact me for source code or other information.");
 }
 
 var internationalizeButton = "<button id=\"internationalize_button\">Internationalize</button>";
