@@ -24,6 +24,7 @@ bio.displayContacts = function(position){
     formattedContact = HTMLemail.replace("%data%", bio.contact_info.email);
     $("#"+position).append(formattedContact);
     formattedContact = HTMLgithub.replace("%data%", bio.contact_info.github);
+    formattedContact = formattedContact.replace("#", github_prefix); 
     $("#"+position).append(formattedContact);
     formattedContact = HTMLlocation.replace("%data%", bio.contact_info.location);
     $("#"+position).append(formattedContact);
@@ -120,6 +121,14 @@ var projects = {
             "link":"#",
             "display":"true",
             "extern":"false"
+        },
+        {
+            "title":"Go-Fish Probability Simulation",
+            "dates":"Spring 2015",
+            "description":"Created a simulation of GoFish that displays the probabilities of a player's guess being correct allowing for a player to make more educated guesses",
+            "link":"http://github.com/gordineerandrew/Go-Fish",
+            "display":"true",
+            "extern":"true"
         },
         {
             "title":"Recursive Anagram Generator",
