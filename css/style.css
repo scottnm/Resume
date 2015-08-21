@@ -1,0 +1,30 @@
+div {
+    border-width: 3px;
+    border-color: black;
+    color: white;
+    display: block;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: green;
+    border-style: solid;
+}
+
+#content-wrapper {
+    padding: 0 20%;
+}
+
+#content-wrapper #content {
+    background-color: blue;
+    border-style: dotted;
+    height: 100%;
+}

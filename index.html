@@ -7,11 +7,23 @@
   
     <!-- Load the page styles. -->
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="js/jQuery.js"></script>
-    <script src="js/helper.js"></script>
   
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div id="header-bar">
+      header-bar
+    </div>
+    <div id="content-wrapper">
+      <div id="content">
+        content
+      </div>
+    </div>
   </body>
+  <script>
+      var ele = document.getElementById('content');
+      for(var i = 0; i < 10; i++) {
+        ele.innerHTML = ele.innerHTML + '\n' + ele.innerHTML;
+      }
+    </script>
 </html>
