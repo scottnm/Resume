@@ -1,11 +1,11 @@
-var contactInfo = {
+var contactData = {
     'location': 'Austin, TX',
     'mobile': '(214) 769-0461',
     'email': 'scottnmunro@gmail.com',
     'github': 'scottnm'
 };
 
-var overview = {
+var welcomeData = {
     'text': 'I am an aspiring Software Engineer and Game Developer ' +
             'as well as a full time Computer Science student at the ' + 
             'University of Texas at Austin. Most of the projects listed ' +
@@ -18,19 +18,19 @@ var overview = {
     ]
 };
 
-var work = {
-    'SWE Intern':{
-        'position': 'Software Engineering Intern',
-        'employer': 'Google',
-        'dates': 'June 2015 - August 2015',
-        'location': 'Mountain View, CA',
-        'description': 'Worked on Google\'s mobile development team, and ' +
-                       'helped develop technology for the Web-based Google ' + 
-                       'Play store.',
-        'display': 'true'
-    },
-
-    'Pod Mentor':{
+var workData = {
+    'entries': [
+        {
+            'position': 'Software Engineering Intern',
+            'employer': 'Google',
+            'dates': 'June 2015 - August 2015',
+            'location': 'Mountain View, CA',
+            'description': 'Worked on Google\'s mobile development team, and ' +
+                           'helped develop technology for the Web-based Google ' + 
+                           'Play store.',
+            'display': 'true'
+        },
+        {
             'position': 'Freshman Mentor',
             'employer': 'University of Texas at Austin',
             'dates': 'August 2014 - Present',
@@ -40,12 +40,13 @@ var work = {
                            'available to them. Also provided tutoring for ' +
                            'introductory Computer Science courses.',
             'display': 'true'
-    }
+        }
+    ]
 };
 
 var githubPrefix = 'https:\/\/github.com\/scottnm\/'
-var projects = {
-    'Java': [
+var projectData = {
+    'entries': [
         {
             'title': 'Huffman Compression',
             'dates': 'Spring 2014',
@@ -53,6 +54,7 @@ var projects = {
                           'compress and decompress files',
             'link': '#',
             'display': 'true',
+            'language': 'Java',
             'extern': 'false'
         },
         {
@@ -63,6 +65,7 @@ var projects = {
                            'allowing for a player to make more educated guesses',
             'link': 'http://github.com/gordineerandrew/Go-Fish',
             'display': 'true',
+            'language': 'Java',
             'extern': 'true'
         },
         {
@@ -72,6 +75,7 @@ var projects = {
                            'the anagrams of a user-given string of text',
             'link': '#',
             'display': 'true',
+            'language': 'Java',
             'extern': 'false'
         },
         {
@@ -82,10 +86,9 @@ var projects = {
                            'first traversal of that tree',
             'link': githubPrefix + 'BinaryTreeBuilder.git',
             'display': 'true',
+            'language': 'Java',
             'extern': 'true'
-        }
-    ],
-    'Python': [
+        },
         {
             'title': 'Neural Network Pong',
             'dates': 'Spring 2014',
@@ -93,6 +96,7 @@ var projects = {
                            'network opponent',
             'link': githubPrefix + 'Neuroevolution-Pong.git',
             'display': 'true',
+            'language': 'Python',
             'extern': 'true'
         },
         {
@@ -102,6 +106,7 @@ var projects = {
                            'evolved to represent a 3-bit NAND function',
             'link': githubPrefix + 'Neural-Network-NAND.git',
             'display': 'false',
+            'language': 'Python',
             'extern': 'true'
         },
         {
@@ -114,6 +119,7 @@ var projects = {
                            'network structures',
             'link': githubPrefix + 'Evolving-Boss-Battles.git',
             'display': 'true',
+            'language': 'Python',
             'extern': 'true'
         },
         {
@@ -127,10 +133,9 @@ var projects = {
                            'been implemented',
             'link': githubPrefix + 'itchnscratch.git',
             'display': 'true',
+            'language': 'Python',
             'extern': 'true'
-        }
-    ],
-    'C++': [
+        },
         {
             'title': 'Space Raiders (Game)',
             'dates': 'Spring 2015',
@@ -141,10 +146,25 @@ var projects = {
                            'conditions, and a simple enemy AI.',
             'link': githubPrefix + 'Space-Raiders.git',
             'display': 'true',
+            'language': 'C++',
             'extern': 'true'
         }
-    ],
+    ]
     
+    /*
     'Javascript' : [
     ]
+    */
 };
+
+var educationData = {
+    'entries': [
+        {
+            "name": "University of Texas at Austin",
+            "degree": "Bachelor of Science",
+            "dates": "May 2017",
+            "city": "Austin, Texas",
+            "major": "Computer Science",
+        }
+    ]
+}

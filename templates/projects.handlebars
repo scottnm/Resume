@@ -1,0 +1,16 @@
+<div id="projects">
+  <h2>Projects</h2>
+  {{#each entries}}
+    {{#if this.display}}
+    <div class="project-entry">
+      <a {{#if this.extern}} href="{{this.link}}" 
+         {{else}} href="javascript:void(0)" onclick="unavailableAlert();" 
+         {{/if}}>
+        {{this.title}}
+      </a>
+      <div class="data">{{this.dates}}</div>
+      <p><br>{{this.description}}</p>
+    </div>
+    {{/if}}
+  {{/each}}
+</div>

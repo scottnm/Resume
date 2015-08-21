@@ -4,10 +4,9 @@
     <meta charset="utf-8">
   
     <title>Scott Munro -- Homepage -- UT Austin</title>
-  
-    <!-- Load the page styles. -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-  
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -20,11 +19,10 @@
       </div>
     </div>
   </body>
-  <script>
-      var ele = document.getElementById('content-lane');
-      for(var i = 0; i < 10; i++) {
-        ele.innerHTML = ele.innerHTML + ' ' + i + ' ' + ele.innerHTML;
-      }
-    </script>
-    <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript"
+          src="bower_components/handlebars/handlebars.runtime.js">
+  </script>
+  <script type="text/javascript" src="js/templates.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </html>

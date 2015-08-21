@@ -1,0 +1,11 @@
+<div id="education">
+  <h2>Education</h2>
+  {{#each entries}}
+    <div class="education-entry">
+      <div>{{this.name}} - {{this.degree}}</div>
+      <div class="data">{{this.dates}}</div>
+      <div class="location">{{this.city}}</div>
+      <em><br>{{this.major}}</em>
+    </div>
+  {{/each}}
+</div>
