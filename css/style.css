@@ -1,6 +1,4 @@
 div {
-    border-width: 3px;
-    border-color: black;
     color: white;
     display: block;
 }
@@ -16,15 +14,18 @@ body {
     left: 0;
     width: 100%;
     background-color: green;
-    border-style: solid;
+    z-index: 1;
+    height: 100px;
 }
 
 #content-wrapper {
+    position: absolute;
     padding: 0 20%;
+    z-index: 0;
+    top: 100px;
 }
 
 #content-wrapper #content {
     background-color: blue;
-    border-style: dotted;
     height: 100%;
 }
