@@ -15,15 +15,16 @@
       header-bar
     </div>
     <div id="content-wrapper">
-      <div id="content">
+      <div id="content-lane">
         content
       </div>
     </div>
   </body>
   <script>
-      var ele = document.getElementById('content');
+      var ele = document.getElementById('content-lane');
       for(var i = 0; i < 10; i++) {
-        ele.innerHTML = ele.innerHTML + '\n' + ele.innerHTML;
+        ele.innerHTML = ele.innerHTML + ' ' + i + ' ' + ele.innerHTML;
       }
     </script>
+    <script type="text/javascript" src="js/main.js"></script>
 </html>
