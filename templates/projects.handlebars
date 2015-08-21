@@ -3,7 +3,7 @@
   {{#each entries}}
     {{#if this.display}}
     <div class="project-entry">
-      <a {{#if this.extern}} href="{{this.link}}" 
+      <a {{#if this.extern}} href="{{this.link}}" target="_blank"
          {{else}} href="javascript:void(0)" onclick="unavailableAlert();" 
          {{/if}}>
         {{this.title}}

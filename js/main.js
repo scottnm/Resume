@@ -26,4 +26,4 @@ function renderResume() {
 renderHeader();
 renderResume();
 prepPage();
-window.addEventListener('resize', prepPage());
+window.onresize = prepPage;

@@ -17,26 +17,24 @@ body {
     z-index: 1;
     box-shadow: 0 0 5px 3px black;
     display: flex;
-    padding: 0 7%;
+    text-align: center;
 }
 
 #header-bar > div {
     margin: auto;
+    flex: 1;
 }
 
 #left-header {
     font-size: 36px;
-    width: 150px;
 }
 
 #center-header {
     font-size: 36px;
     margin: auto;
-    width: 100px;
-    text-align: center;
 }
 
-a {
+a, a:visited {
     color: white;
 }
 
@@ -47,7 +45,7 @@ a:hover{
 #right-header {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    white-space: nowrap;
 }
 
 #right-header > div {
@@ -68,6 +66,79 @@ a:hover{
 #content-wrapper #content-lane {
     position: relative;
     background-color: blue;
-    padding: 10px;
+    padding: 16px 32px;
     width: 100%;
 }
+
+@media screen and (max-width: 700px) {
+    #content-wrapper {
+        padding: 0;
+    }
+    
+    #header-bar .header-padder {
+        width: 0;
+        flex: 0;
+    }
+}
+
+* {
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.education-entry, .work-entry, .project-entry, #welcome {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h1 {
+  color: #F5A623;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  color: #999999;
+  line-height: 29px;
+  padding: 10px;
+}
+
+h3 {
+  color: #000000;
+  line-height: 22px;
+}
+
+.date {
+  color: #999999;
+  line-height: 16px;
+  float: left;
+}
+
+.location {
+  color: #999999;
+  line-height: 16px;
+  float: right;
+}
+
+p {
+  line-height: 21px;
+}
+
+#welcome {
+  color: #F3F3F3;
+  line-height: 28px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+span {
+  padding: 5px;
+}
+
