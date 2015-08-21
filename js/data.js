@@ -1,8 +1,15 @@
+
+var githubPrefix = 'https:\/\/github.com\/scottnm\/'
+
 var contactData = {
+    'firstName': 'Scott',
+    'lastName': 'Munro',
+    'middle': 'N.',
     'location': 'Austin, TX',
     'mobile': '(214) 769-0461',
     'email': 'scottnmunro@gmail.com',
-    'github': 'scottnm'
+    'githubUser': 'scottnm',
+    'githubUrl': githubPrefix
 };
 
 var welcomeData = {
@@ -28,7 +35,7 @@ var workData = {
             'description': 'Worked on Google\'s mobile development team, and ' +
                            'helped develop technology for the Web-based Google ' + 
                            'Play store.',
-            'display': 'true'
+            'display': true
         },
         {
             'position': 'Freshman Mentor',
@@ -39,12 +46,11 @@ var workData = {
                            'Science Freshman in the tools and resources ' +
                            'available to them. Also provided tutoring for ' +
                            'introductory Computer Science courses.',
-            'display': 'true'
+            'display': true
         }
     ]
 };
 
-var githubPrefix = 'https:\/\/github.com\/scottnm\/'
 var projectData = {
     'entries': [
         {
@@ -53,9 +59,9 @@ var projectData = {
             'description': 'Implemented the Huffman compression algorithm to ' +
                           'compress and decompress files',
             'link': '#',
-            'display': 'true',
+            'display': true,
             'language': 'Java',
-            'extern': 'false'
+            'extern': false
         },
         {
             'title': 'Go-Fish Probability Simulation',
@@ -64,9 +70,9 @@ var projectData = {
                            'probabilities of a player\'s guess being correct ' +
                            'allowing for a player to make more educated guesses',
             'link': 'http://github.com/gordineerandrew/Go-Fish',
-            'display': 'true',
+            'display': true,
             'language': 'Java',
-            'extern': 'true'
+            'extern': true
         },
         {
             'title': 'Recursive Anagram Generator',
@@ -74,9 +80,9 @@ var projectData = {
             'description': 'Built a program that recursively finds all of ' +
                            'the anagrams of a user-given string of text',
             'link': '#',
-            'display': 'true',
+            'display': true,
             'language': 'Java',
-            'extern': 'false'
+            'extern': false
         },
         {
             'title': 'Binary Tree Builder',
@@ -85,9 +91,9 @@ var projectData = {
                            'post-order traversal and outputs the breadth-' +
                            'first traversal of that tree',
             'link': githubPrefix + 'BinaryTreeBuilder.git',
-            'display': 'true',
+            'display': true,
             'language': 'Java',
-            'extern': 'true'
+            'extern': true
         },
         {
             'title': 'Neural Network Pong',
@@ -95,9 +101,9 @@ var projectData = {
             'description': 'Built classic game Pong, with a trained neural ' +
                            'network opponent',
             'link': githubPrefix + 'Neuroevolution-Pong.git',
-            'display': 'true',
+            'display': true,
             'language': 'Python',
-            'extern': 'true'
+            'extern': true
         },
         {
             'title': 'Neural Net NAND',
@@ -105,9 +111,9 @@ var projectData = {
             'description': 'Developed a neural network structure that ' +
                            'evolved to represent a 3-bit NAND function',
             'link': githubPrefix + 'Neural-Network-NAND.git',
-            'display': 'false',
+            'display': false,
             'language': 'Python',
-            'extern': 'true'
+            'extern': true
         },
         {
             'title': 'Evolving Boss Battles',
@@ -118,9 +124,9 @@ var projectData = {
                            'effects of different training methods and neural ' +
                            'network structures',
             'link': githubPrefix + 'Evolving-Boss-Battles.git',
-            'display': 'true',
+            'display': true,
             'language': 'Python',
-            'extern': 'true'
+            'extern': true
         },
         {
             'title': 'Top Down Shooter (Game)',
@@ -132,9 +138,9 @@ var projectData = {
                            'collision, and enemy generation have already ' +
                            'been implemented',
             'link': githubPrefix + 'itchnscratch.git',
-            'display': 'true',
+            'display': true,
             'language': 'Python',
-            'extern': 'true'
+            'extern': true
         },
         {
             'title': 'Space Raiders (Game)',
@@ -145,9 +151,9 @@ var projectData = {
                            'mechanics such as collisions, win-lose ' +
                            'conditions, and a simple enemy AI.',
             'link': githubPrefix + 'Space-Raiders.git',
-            'display': 'true',
+            'display': true,
             'language': 'C++',
-            'extern': 'true'
+            'extern': true
         }
     ]
     

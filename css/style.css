@@ -16,6 +16,42 @@ body {
     background-color: green;
     z-index: 1;
     box-shadow: 0 0 5px 3px black;
+    display: flex;
+    padding: 0 7%;
+}
+
+#header-bar > div {
+    margin: auto;
+}
+
+#left-header {
+    font-size: 36px;
+    width: 150px;
+}
+
+#center-header {
+    font-size: 36px;
+    margin: auto;
+    width: 100px;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+a:hover{
+    color: gray;
+}
+
+#right-header {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+#right-header > div {
+    flex: 1;
 }
 
 #content-wrapper {

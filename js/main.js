@@ -7,7 +7,12 @@ function prepPage() {
 }
 
 function unavailableAlert() {
-    alert("This project is not available to view online, please contact me for source code or other information.");
+    alert('This project is not available to view online, please contact me ' +
+          'for source code or other information.');
+}
+
+function renderHeader() {
+    headerBar.innerHTML = Handlebars.templates['headerbar'](contactData); 
 }
 
 function renderResume() {
@@ -18,6 +23,7 @@ function renderResume() {
     contentLane.innerHTML = html;
 }
 
+renderHeader();
+renderResume();
 prepPage();
 window.addEventListener('resize', prepPage());
-renderResume();
