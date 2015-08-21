@@ -1,10 +1,12 @@
 <div id="welcome">
   <h2>Welcome!</h2>
-  <p>{{text}}</p>
-  <h3>Skills at a Glance</h3>
-  <ul id="skills">
-    {{#each skills}}
-      <li>{{this}}</li>
-    {{/each}}
-  </ul>
+  <div id="welcome-content">
+    <div class="entry-text">{{text}}</div>
+    <h3>Skills at a Glance</h3>
+    <ul id="skills">
+      {{#each skills}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

@@ -1,11 +1,41 @@
-div {
-    color: white;
-    display: block;
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.education-entry, .work-entry, .project-entry, #welcome-content {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 10px;
+}
+
+.dates {
+  line-height: 16px;
+}
+
+.location {
+  float: right;
+  
+}
+
+.dates, .location {
+    font-style: italic;
+    color: gray;
+}
+
+.entry-text {
+    color: black;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 24px;
+  color: black;
 }
 
 body {
     width: 100%;
     height: 100%;
+    background-color: lightgray;
 }
 
 #header-bar {
@@ -18,6 +48,7 @@ body {
     box-shadow: 0 0 5px 3px black;
     display: flex;
     text-align: center;
+    color: white;
 }
 
 #header-bar > div {
@@ -27,6 +58,7 @@ body {
 
 #left-header {
     font-size: 36px;
+    text-transform: uppercase;
 }
 
 #center-header {
@@ -35,7 +67,7 @@ body {
 }
 
 a, a:visited {
-    color: white;
+    color: inherit;
 }
 
 a:hover{
@@ -65,9 +97,10 @@ a:hover{
 
 #content-wrapper #content-lane {
     position: relative;
-    background-color: blue;
+    background-color: white;
     padding: 16px 32px;
     width: 100%;
+    color: green;
 }
 
 @media screen and (max-width: 700px) {
@@ -79,66 +112,32 @@ a:hover{
         width: 0;
         flex: 0;
     }
+    
+    #left-header, #center-header {
+        font-size: 24px;
+    }
+    
+    #right-header {
+        font-size: 11px;
+    }
 }
 
-* {
-  padding:0;
-  margin:0;
-  font-family: 'Roboto', sans-serif;
-}
-
-.clearfix {
-  overflow: auto;
-}
-
-.education-entry, .work-entry, .project-entry, #welcome {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-h1 {
-  color: #F5A623;
-  line-height: 48px;
-  display: inline;
-}
-
-h2 {
-  color: #999999;
-  line-height: 29px;
-  padding: 10px;
-}
-
-h3 {
-  color: #000000;
-  line-height: 22px;
-}
-
-.date {
-  color: #999999;
-  line-height: 16px;
-  float: left;
-}
-
-.location {
-  color: #999999;
-  line-height: 16px;
-  float: right;
-}
-
-p {
-  line-height: 21px;
-}
-
-#welcome {
-  color: #F3F3F3;
-  line-height: 28px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-span {
-  padding: 5px;
+@media screen and (max-width: 500px) {
+    #content-wrapper {
+        padding: 0;
+    }
+    
+    #header-bar .header-padder {
+        width: 0;
+        flex: 0;
+    }
+    
+    #left-header, #center-header {
+        font-size: 18px;
+    }
+    
+    #right-header {
+        font-size: 9px;
+    }
 }
 

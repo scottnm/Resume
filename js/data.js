@@ -4,7 +4,6 @@ var githubPrefix = 'https:\/\/github.com\/scottnm\/'
 var contactData = {
     'firstName': 'Scott',
     'lastName': 'Munro',
-    'middle': 'N.',
     'location': 'Austin, TX',
     'mobile': '(214) 769-0461',
     'email': 'scottnmunro@gmail.com',

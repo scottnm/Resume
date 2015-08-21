@@ -3,13 +3,13 @@
   {{#each entries}}
     {{#if this.display}}
     <div class="project-entry">
-      <a {{#if this.extern}} href="{{this.link}}" target="_blank"
+      <a class="entry-title" {{#if this.extern}} href="{{this.link}}" target="_blank"
          {{else}} href="javascript:void(0)" onclick="unavailableAlert();" 
          {{/if}}>
         {{this.title}}
       </a>
-      <div class="data">{{this.dates}}</div>
-      <p><br>{{this.description}}</p>
+      <div class="dates">{{this.dates}}</div>
+      <div class="entry-text">{{this.description}}</div>
     </div>
     {{/if}}
   {{/each}}

@@ -2,10 +2,10 @@
   <h2>Education</h2>
   {{#each entries}}
     <div class="education-entry">
-      <div>{{this.name}} - {{this.degree}}</div>
-      <div class="data">{{this.dates}}</div>
+      <div class="entry-title">{{this.name}} - {{this.degree}}</div>
+      <div class="dates">{{this.dates}}</div>
       <div class="location">{{this.city}}</div>
-      <em><br>{{this.major}}</em>
+      <div class="entry-text">{{this.major}}</div>
     </div>
   {{/each}}
 </div>

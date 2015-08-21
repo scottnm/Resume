@@ -3,10 +3,10 @@
   {{#each entries}}
     {{#if this.display}}
     <div class="work-entry">
-      <div>{{this.employer}} - {{this.position}}</div>
-      <div class="data">{{this.dates}}</div>
       <div class="location">{{this.location}}</div>
-      <p><br>{{this.description}}</p>
+      <div class="entry-title">{{this.employer}} - {{this.position}}</div>
+      <div class="dates">{{this.dates}}</div>
+      <div class="entry-text" >{{this.description}}</div>
     </div>
     {{/if}}
   {{/each}}
