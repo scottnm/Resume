@@ -7,3 +7,4 @@ function prepPage() {
 }
 
 prepPage();
+window.addEventListener('resize', prepPage());
